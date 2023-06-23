@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/79be424806.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="todo">
+        <div class="header">
+            <h1>ToDo List</h1>
+            <input type="text" class="todo-input" placeholder="Write your todo list here...">
+            <button class="btn-add">Add</button>
+        </div>
+        <div class="todolist">
+            <h3>List of Works Todo:</h3>
+            <p class="error-info"></p>
+            <ul>
+                <li data-id='test1'>Shopping
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li data-id='test2'>Rent Pay
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li data-id='test3'>Cleaning
+                    <div class="tools">
+                        <button class="complete"><i class="fas fa-check"></i></button>
+                        <button class="edit">EDIT</button>
+                        <button class="delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="popup">
+        <h3>Edit your todo:</h3>
+        <div class="popup-body">
+            <p class="popup-info"></p>
+            <input type="text" class="popup-input" placeholder="Wprowadź nową treść zadania...">
+            <button class="popup-btn accept">Update</button>
+            <button class="popup-btn cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
