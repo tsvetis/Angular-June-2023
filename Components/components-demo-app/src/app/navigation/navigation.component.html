@@ -1,0 +1,23 @@
+<div id="nav">
+  <h3>{{ titleFromApp }}</h3>
+
+  <span *ngIf="isActive">
+    <ul>
+      <li *ngFor="let user of activeUsers">
+        <span [style.color]="user?.age ? 'red' : 'green'">
+          {{ user.name + ": " + user.age }}
+        </span>
+      </li>
+    </ul>
+  </span>
+
+  <span *ngIf="!isActive">
+    <div>Nothing is Active! :(</div>
+  </span>
+
+  <input [value]="inputValue" type="text" />
+
+  <button (click)="handleClick($event, 1000, 1100, 1200)">
+    Make {{ isActive ? "Inactive" : "Active" }}
+  </button>
+</div>
