@@ -1,0 +1,12 @@
+.user-list-wraper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+  background-color: aliceblue;
+}
