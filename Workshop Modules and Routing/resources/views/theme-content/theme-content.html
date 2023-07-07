@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3cd69e2433.js" crossorigin="anonymous"></script>
+    <title>SoftUni Forum</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="mini-navbar-wrap">
+            <div class="logo-wrap">
+                <p class="logo"><span class="logo">SoftUni Forum</span></p>
+            </div>
+            <div class="mini-navbar">
+                <ul>
+                    <!-- <li>
+                        <a href="#">John's profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li> -->
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Themes</a>
+                </li>
+                <li>
+                    <a href="#">New Theme</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <!-- theme content  -->
+        <div class="theme-content">
+            <!-- theme-title  -->
+            <div class="theme-title">
+                <div class="theme-name-wrapper">
+                    <div class="theme-name">
+                        <h2>Angular 10</h2>
+                        <p>Date: <time>2020-10-10 12:08:28</time></p>
+                    </div>
+                    <div class="subscribers">
+                        <p>Subscribers: <span>456</span></p>
+                        <!-- <button class="subscribe">Subscribe</button>
+                        <button class="unsubscribe">Unsubscribe</button> -->
+                    </div>
+                </div>
+            </div>
+            <!-- comment  -->
+            <div class="comment">
+                <header class="header">
+                    <p><span>David</span> posted on <time>2020-10-10 12:08:28</time></p>
+                </header>
+                <div class="comment-main">
+                    <div class="userdetails">
+                        <img src="./profile.png" alt="avatar">
+                    </div>
+                    <div class="post-content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere sint dolorem quam,
+                            accusantium ipsa veniam laudantium inventore aut, tenetur quibusdam doloribus. Incidunt odio
+                            nostrum facilis ipsum dolorem deserunt illum?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facere sint dolorem quam,
+                            accusantium ipsa veniam laudantium inventore aut, tenetur quibusdam doloribus. Incidunt odio
+                            nostrum facilis ipsum dolorem deserunt illum?</p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <!-- <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-down"></i> -->
+                    <p><span>5</span> likes</p>
+                </div>
+            </div>
+            <div class="comment">
+                <header class="header">
+                    <p><span>Mark</span> posted on <time>2020-10-10 14:28:11</time></p>
+                </header>
+                <div class="comment-main">
+                    <div class="userdetails">
+                        <img src="./profile.png" alt="avatar">
+                    </div>
+                    <div class="post-content">
+                        <p>Lorem ipsum dolor sit amet consectetur </p>
+                    </div>
+                </div>
+                <div class="footer">
+                    <!-- <i class="fas fa-thumbs-up"></i>
+                    <i class="fas fa-thumbs-down"></i> -->
+                    <p><span>3</span> likes</p>
+                </div>
+            </div>
+            <div class="answer-comment">
+                <p><span>currentUser</span> comment:</p>
+                <div class="answer">
+                    <form>
+                        <textarea name="postText" id="comment" cols="30" rows="10"></textarea>
+                        <button>Post</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>This site is designed to be used for training purposes at SoftUni.</p>
+        <p>You can find the real SoftUni forum at this link:</p>
+        <p><span><a href="https://softuni.bg/forum">https://softuni.bg/forum</a></span> Angular course Copyright &copy
+            2020</p>
+    </footer>
+</body>
+
+</html>

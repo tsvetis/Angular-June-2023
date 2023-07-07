@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3cd69e2433.js" crossorigin="anonymous"></script>
+    <title>SoftUni Forum</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="mini-navbar-wrap">
+            <div class="logo-wrap">
+                <p class="logo"><span class="logo">SoftUni Forum</span></p>
+            </div>
+            <div class="mini-navbar">
+                <ul>
+                    <!-- <li>
+                        <a href="#">John's profile</a>
+                    </li>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li> -->
+                    <li>
+                        <a href="#">Login</a>
+                    </li>
+                    <li>
+                        <a href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Themes</a>
+                </li>
+                <li>
+                    <a href="#">New Theme</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- homepage -->
+    <div class="container">
+        <form class="register" action="" method="post">
+
+            <fieldset>
+                <h2>Registration Form</h2>
+
+                <!-- username -->
+                <p class="field field-icon">
+                    <label for="username"><span><i class="fas fa-user"></i></span></label>
+                    <input class="input-error" type="text" name="username" id="username" placeholder="Johny">
+                </p>
+                <p class="error">
+                    Username is required!
+                </p>
+
+                <!-- email -->
+                <p class="field field-icon">
+                    <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                    <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+                </p>
+                <!-- <p class="error">
+                    Email is required!
+                </p>
+                <p class="error">
+                    Email is not valid!
+                </p> -->
+
+                <!-- telephone -->
+                <p class="field field-icon">
+                    <label for="tel"><span><i class="fas fa-phone"></i></span></label>
+                    <select name="select-tel" id="select-tel" class="tel">
+                        <option value="00359">+359</option>
+                    </select>
+                    <input type="text" name="tel" id="tel" placeholder="885 888 888">
+                </p>
+
+                <!-- password -->
+                <p class="field field-icon">
+                    <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                    <input type="password" name="password" id="password" placeholder="******">
+                </p>
+                <!-- <p class="error">
+                    Password is required!
+                </p>
+                <p class="error">
+                    Password must be at least 4 characters!
+                </p> -->
+
+                <!-- rePassword -->
+                <p class="field field-icon">
+                    <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
+                    <input type="password" name="rePassword" id="rePassword" placeholder="******">
+                </p>
+                <!-- <p class="error">Repeat Password does not match password!</p> -->
+
+                <button disabled>Create Account</button>
+
+                <p class="text-center">
+                    Have an account?
+                    <a href="#">Log In</a>
+                </p>
+
+            </fieldset>
+        </form>
+    </div>
+
+    <footer>
+        <p>This site is designed to be used for training purposes at SoftUni.</p>
+        <p>You can find the real SoftUni forum at this link:</p>
+        <p><span><a href="https://softuni.bg/forum">https://softuni.bg/forum</a></span> Angular course Copyright &copy
+            2020</p>
+    </footer>
+</body>
+
+</html>

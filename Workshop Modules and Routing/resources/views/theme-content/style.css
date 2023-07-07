@@ -1,0 +1,261 @@
+@import url('reset.css');
+@import url('layout.css');
+@import url('typography.css');
+@import url('responsive.css');
+@import url('theme-content.css');
+
+body {
+    max-width: 1366px;
+    margin: auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 4.5em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+}
+
+span {
+    font-weight: bold;
+}
+
+button {
+    background-color: #4ebced;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/* header  */
+
+header {
+    background: rgb(0, 128, 182);
+    background: linear-gradient(0deg, rgba(0, 128, 182, 1) 0%, rgba(0, 128, 182, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+.mini-navbar ul {
+    border: 1px solid #00d4ff;
+    border-radius: 0.3em;
+    padding-left: 0;
+    width: 100%;
+}
+
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    border-top: 1px solid #00acf4;
+}
+
+.logo {
+    font-size: 1.3em;
+    color: white;
+    padding-bottom: 0;
+}
+
+.logo-wrap {
+    font-family: 'Parisienne', cursive;
+    letter-spacing: .5em;
+    margin: 0.5em 0;
+}
+
+.mini-navbar-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+/* mini-navbar */
+
+.mini-navbar ul {
+    background-color: #6ba1b8;
+    border-radius: 5px;
+}
+
+.mini-navbar ul li+li {
+    border-left: 1px solid lightgrey;
+    padding-left: .5em;
+}
+
+/* main  */
+
+main {
+    width: 50%;
+}
+
+/* theme list item */
+
+.theme-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.theme-container span {
+    font-weight: bold;
+}
+
+.theme-container h2, p {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+}
+
+.theme-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+.theme-title {
+    padding: 0;
+}
+
+.theme-name {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+
+.subscribers {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscribe {
+    background-color: green;
+}
+
+.unsubscribe {
+    background-color: red;
+}
+
+time {
+    font-weight: bold;
+}
+
+/* aside  */
+
+aside {
+    width: 29%;
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+
+.aside * {
+    margin: 0;
+    padding: 0;
+}
+
+.aside>div {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    padding: 0.3em 0.5em;
+}
+
+.title {
+    font-size: 1.5em;
+    border-bottom: none;
+}
+
+.aside .aside-theme {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+
+.aside h3 {
+    border-bottom: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    background-color: #4ebced;
+    padding-left: 0.5rem;
+}
+
+.aside-theme+.aside-theme {
+    border-top: dashed 1px #999;
+}
+
+.aside-theme p {
+    text-align: right;
+}
+
+.aside-theme a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* footer  */
+
+footer {
+    background: rgb(0, 212, 255);
+    ;
+    margin-top: 1em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1366px;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+footer span {
+    font-size: 1.5em;
+}

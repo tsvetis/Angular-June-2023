@@ -1,0 +1,201 @@
+/* theme content  */
+
+.theme-content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+/* theme title  */
+
+/* theme title  */
+
+.theme-name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 1em;
+}
+
+.theme-title {
+    padding: 0;
+}
+
+.theme-name {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+
+.subscribers {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscribe {
+    background-color: green;
+}
+
+.unsubscribe {
+    background-color: red;
+}
+
+.theme-title {
+    width: 100%;
+}
+
+.theme-name-wrapper .subscribers p {
+    text-align: right;
+}
+
+.theme-name {
+    margin-right: 1em;
+}
+
+.theme-name h2 {
+    padding-top: 0;
+}
+
+/* comment  */
+
+.comment {
+    margin-top: 1em;
+    border: 1px solid;
+    border-radius: 0.3em;
+    width: 100%;
+    padding: 1em;
+}
+
+.comment header p {
+    padding: 0.3em;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px dashed;
+    margin-right: 0;
+}
+
+.comment-main {
+    margin: 1em;
+    display: flex;
+}
+
+.userdetails {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.userdetails p {
+    padding-left: 0;
+    text-align: left;
+}
+
+.post-content p {
+    padding-left: 1.5em;
+}
+
+.userdetails div {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+}
+
+.userdetails img {
+    padding: 0;
+    align-self: center;
+    margin: 1em 0;
+    width: 5em;
+    height: 5em;
+    border: 1px solid;
+}
+
+.footer {
+    font-size: 1.5em;
+    border-top: 1px dashed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: rgb(0, 128, 182);
+}
+
+.footer i {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer p {
+    padding-left: 0.5em;
+}
+
+.footer .fas.fa-thumbs-up {
+    color: green;
+}
+
+.footer .fas.fa-thumbs-down {
+    color: red;
+}
+
+/* answer-comment */
+
+.answer-comment {
+    width: 100%;
+    /* display: flex; */
+    margin-top: 1em;
+}
+
+.answer-comment p {
+    flex-basis: 15%;
+    padding-bottom: 0.3em;
+}
+
+.answer-comment p span {
+    color: rgb(0, 128, 182);
+    font-size: 1.2em;
+}
+
+.answer {
+    border: 1px solid;
+    border-radius: 0.3em;
+    flex-basis: 85%;
+    text-align: center;
+}
+
+.answer textarea {
+    width: 90%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.answer button {
+    color: white;
+    margin: 0.5em 1em;
+    padding: 0.2em 1em;
+    border: 1px solid;
+    border-radius: 0.3em;
+}
+
+.answer button:hover {
+    cursor: pointer;
+}
+
+.comment-area {
+    min-width: 100%
+}
