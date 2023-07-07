@@ -10,6 +10,11 @@ import { Post } from './types/post';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
+  getTheme(id: string) {
+    const { appUrl } = environment;
+    return this.http.get<Theme>(`${appUrl}/themes/${id}`);
+  }
+
   getThemes() {
     const { appUrl } = environment;
     return this.http.get<Theme[]>(`${appUrl}/themes`);
