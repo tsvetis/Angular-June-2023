@@ -1,0 +1,45 @@
+<form #loginForm="ngForm" (ngSubmit)="submitHandler()">
+  <!-- EMAIL -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      [ngModel]="email"
+      email
+      required
+      #emailInput="ngModel"
+    />
+  </div>
+  <!-- email error msg -->
+  <div *ngIf="emailInput">
+    <div *ngIf="emailInput.errors?.['required']">Email is required!</div>
+    <div *ngIf="emailInput.errors?.['email']">Invalid EMAIL!</div>
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="text"
+      id="password"
+      name="password"
+      ngModel
+      #passwordInput="ngModel"
+      [appMaxCount]="4"
+    />
+  </div>
+  <!-- password error msg -->
+  <div *ngIf="passwordInput.errors?.['appMaxCount']">
+    Invalid Password, because length is longer than
+    {{ passwordInput.errors?.['appMaxCount'] }} ...
+  </div>
+
+  <button>Login</button>
+</form>
+
+<br />
+<br />
+<br />
+{{ loginForm.value | json }}

@@ -1,0 +1,40 @@
+<nav>
+  <div appMyRouterLink="/login">Link to Login</div>
+  <div appMyRouterLink="/register">Link to Register</div>
+</nav>
+<router-outlet />
+
+<hr />
+
+<!-- Playground -->
+<!-- structural directives are always with * prefix -->
+<div *ngIf="true">Simple Div 1</div>
+
+<!-- the star prefix refers to ng-template -->
+<ng-template [ngIf]="true">
+  <div>Simple Div 1</div>
+</ng-template>
+
+<!-- Custom Structural Directives -->
+<button (click)="toggle()">toggle my state</button>
+
+<!-- Usage 1 -->
+<div *appMyStructural="isShown">Structural Directives (Usage 1)</div>
+
+<!-- Usage 2 -->
+<ng-template
+  [appMyStructural]="isShown"
+  let-value="value"
+  let-val
+  #myDirectiveRef="appMyStructural"
+>
+  <div>Structural Directives (Usage 2)</div>
+  <h4>value: {{ value }} : {{ val }}</h4>
+</ng-template>
+
+<!-- Usage 3 -->
+<ng-template #tmp>
+  <div>Structural Directives (Usage 3)</div>
+</ng-template>
+
+<ng-container [appMyStructural]="isShown" [myTmpProp]="tmp" />

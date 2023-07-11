@@ -1,0 +1,45 @@
+<form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+  <!-- EMAIL -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" formControlName="email" />
+  </div>
+  <!-- email error msg -->
+  <div *ngIf="registerForm.get('email')?.touched">
+    <div *ngIf="registerForm.get('email')?.errors?.['required']">
+      Email is required!
+    </div>
+    <div *ngIf="registerForm.get('email')?.errors?.['email']">
+      Invalid EMAIL!
+    </div>
+  </div>
+
+  <!-- PASSWORD -->
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="text"
+      id="password"
+      name="password"
+      formControlName="password"
+    />
+  </div>
+  <!-- password error msg -->
+  <div *ngIf="this.registerForm.get('password')?.errors?.['maxlength']">
+    Invalid Password, because length is longer than
+    {{ this.registerForm.get('password')?.errors?.['maxlength'].requiredLength }}
+    ...
+  </div>
+
+  <!-- <div *ngIf="registerForm.get('password')?.errors?.['appMaxCount']">
+    Invalid Password, because length is longer than
+    {{ registerForm.get('password')?.errors?.['appMaxCount'] }} ...
+  </div> -->
+
+  <button>Login</button>
+</form>
+
+<br />
+<br />
+<br />
+{{ registerForm.value | json }}
