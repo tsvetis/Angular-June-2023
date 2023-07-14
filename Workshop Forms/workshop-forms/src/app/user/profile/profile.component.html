@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="profile">
+    <img src="/assets/profile.png" alt="default user" />
+    <h3>User Info:</h3>
+
+    <!-- READONLY MODE -->
+    <ng-container *ngIf="!isEditMode">
+      <div class="flex">
+        <p>Username:</p>
+        <p>{{ profileDetails?.username }}</p>
+      </div>
+      <div class="flex">
+        <p>Email:</p>
+        <p>{{ profileDetails?.email }}</p>
+      </div>
+      <div class="flex">
+        <p>Phone:</p>
+        <p>+359 {{ profileDetails?.tel }}</p>
+      </div>
+      <button class="edit-button" (click)="toggleEditMode()">Edit</button>
+    </ng-container>
+
+    <!-- EDIT MODE -->
+    <ng-container *ngIf="isEditMode">
+      <form [formGroup]="form" (ngSubmit)="saveProfileHandler()">
+        <!-- username input -->
+        <div class="flex">
+          <p>Username:</p>
+          <input type="text" id="username" formControlName="username" />
+        </div>
+
+        <!-- username validations -->
+        <ng-container *ngIf="form.get('username')?.touched">
+          <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+            Username is required!
+          </p>
+          <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+            Username's length should not be less than 5!
+          </p>
+        </ng-container>
+
+        <!-- email input -->
+        <div class="flex">
+          <p>Email:</p>
+          <input type="email" id="email" formControlName="email" />
+        </div>
+
+        <!-- email validations -->
+        <ng-container *ngIf="form.get('email')?.touched">
+          <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+            Email is required!
+          </p>
+          <p
+            class="error"
+            *ngIf="form.get('email')?.errors?.['appEmailValidator']"
+          >
+            Email is not valid!
+          </p>
+        </ng-container>
+
+        <!-- telephone input -->
+        <div class="flex">
+          <p>Phone:</p>
+          <div>
+            <select name="select-tel" id="select-tel" class="tel">
+              <option value="00359">+359</option>
+            </select>
+            <input type="text" id="tel" formControlName="tel" />
+          </div>
+        </div>
+
+        <!-- ACTIONS -->
+        <button class="red-button">Cancel</button>
+        <button class="green-button">Save</button>
+      </form>
+    </ng-container>
+  </div>
+</div>

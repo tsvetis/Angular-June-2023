@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="new-theme-border">
+    <div class="header-background">
+      <span>New Theme</span>
+    </div>
+    <form #form="ngForm" (ngSubmit)="newThemeSubmitHandler(form)">
+      <div class="new-theme-title">
+        <label for="themeName">Title <span class="red">*</span></label>
+        <input
+          type="text"
+          name="themeName"
+          id="themeName"
+          ngModel
+          #inputName="ngModel"
+          required
+          minlength="5"
+        />
+
+        <ng-container *ngIf="inputName.touched">
+          <p class="error" *ngIf="inputName.errors?.['required']">
+            Theme name is required.
+          </p>
+          <p class="error" *ngIf="inputName.errors?.['minlength']">
+            Theme name must be at least 5 characters long.
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="new-theme-content">
+        <label for="postText">Post <span class="red">*</span></label>
+        <textarea
+          type="text"
+          name="postText"
+          id="postText"
+          rows="8"
+          class="height"
+          ngModel
+          #textAreaInput="ngModel"
+          required
+          minlength="10"
+        ></textarea>
+
+        <ng-container *ngIf="textAreaInput.touched">
+          <p class="error" *ngIf="textAreaInput.errors?.['required']">
+            The field with your post is required.
+          </p>
+          <p class="error" *ngIf="textAreaInput.errors?.['minlength']">
+            Post must be at least 10 characters long.
+          </p>
+        </ng-container>
+      </div>
+
+      <div class="new-theme-buttons">
+        <button class="cancel">Cancel</button>
+        <button class="public" [disabled]="form.invalid">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
