@@ -10,10 +10,11 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
-import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { appInterceptorProvider } from './app.interceptor';
+import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 @NgModule({
   declarations: [
@@ -24,17 +25,17 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HomeComponent,
     WelcomeComponent,
     NotFoundComponent,
+    AuthenticateComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CoreModule,
     SharedModule,
-    UserModule,
     ThemeModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,13 +1,13 @@
-import { Component, OnDestroy } from "@angular/core";
-import { UserService } from "../user.service";
-import { Router } from "@angular/router";
-import { NgForm } from "@angular/forms";
-import { DEFAULT_EMAIL_DOMAINS } from "src/app/shared/constants";
+import { Component, OnDestroy } from '@angular/core';
+import { UserService } from '../user.service';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { DEFAULT_EMAIL_DOMAINS } from 'src/app/shared/constants';
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
   appEmailDomains = DEFAULT_EMAIL_DOMAINS;
@@ -19,7 +19,10 @@ export class LoginComponent {
       return;
     }
 
-    this.userService.login();
-    this.router.navigate(["/"]);
+    const { email, password } = form.value;
+
+    this.userService.login(email, password).subscribe(() => {
+      this.router.navigate(['/themes']);
+    });
   }
 }
