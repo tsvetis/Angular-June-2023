@@ -1,0 +1,86 @@
+/* new-theme */
+
+.new-theme-border {
+  border: 1px solid;
+  border-radius: 1em;
+  width: 80%;
+  margin: auto;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+.new-theme-border .input {
+  margin-bottom: 1em;
+}
+
+.header-background {
+  background-color: #4ebced;
+  border: 1px solid #4ebced;
+  padding: 1.5em;
+  padding-bottom: 0;
+  margin-bottom: 1em;
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+}
+
+.header-background span {
+  background-color: #fff;
+  padding: 0.5em;
+  margin-top: 1em;
+  border-radius: 0.3em;
+}
+
+.title,
+.new-theme-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-theme-content {
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.new-theme-content textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.new-theme-content label {
+  margin-bottom: 0.3em;
+}
+
+.new-theme-title input {
+  width: 55%;
+  border-radius: 0.3em;
+  padding: 0.35em;
+}
+
+button + button {
+  margin-left: 1rem;
+}
+
+.new-theme-buttons {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.new-theme-buttons button {
+  padding: 0.4em 1.5em;
+  border: 1px solid #333333;
+  border-radius: 0.3em;
+}
+
+p.error {
+  text-align: left;
+  border-radius: 0.3em;
+  color: red;
+  padding-top: 0;
+}
+
+.input-error {
+  border-left-color: red;
+}
