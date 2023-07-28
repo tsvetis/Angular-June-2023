@@ -1,0 +1,12 @@
+<app-your />
+<hr />
+<div>
+  {{ counter$ | async }}
+  <button (click)="incrementHandler()">Increment</button>
+</div>
+<div>
+  <input type="number" #inputNumber [value]="counter$ | async" />
+  <button (click)="setValueHandler(inputNumber.valueAsNumber)">
+    Set Value
+  </button>
+</div>

@@ -3,12 +3,19 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Theme } from './types/theme';
 import { Post } from './types/post';
+import { tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
+
+  posts: any = [];
+
+  get postCollection(): string {
+    return this.posts || [];
+  }
 
   // THEMES
   getTheme(id: string) {
@@ -30,6 +37,8 @@ export class ApiService {
     const { apiUrl } = environment;
     const limitFilter = limit ? `?limit=${limit}` : '';
 
-    return this.http.get<Post[]>(`${apiUrl}/posts${limitFilter}`);
+    return this.http
+      .get<Post[]>(`${apiUrl}/posts${limitFilter}`)
+      .pipe(tap((posts) => (this.posts = posts)));
   }
 }
